@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Certification Tool Helper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container is-widescreen">
+        <div class="header">
+            <figure class="image is-128x128">
+                <img src="assets/logo.png" alt="logo" />
+            </figure>
+            <h1 class="title">The Edufied SIS Certification Sanity Checks</h1>
+        </div>
+        <div class="section auth-form">
+            <form>
+                <div class="field">
+                    <label for="apiUrl" class="label">Api URL</label>
+                    <div class="control">
+                        <input id="apiUrl" class="input" type="text" placeholder="https://api.ed-fi.org/v7.2/api/oauth/token" required />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="clientId" class="label">Client Id</label>
+                    <div class="control">
+                        <input id="clientId" class="input" type="text" placeholder="*****" required />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="clientSecret" class="label">Client Secret</label>
+                    <div class="control">
+                        <input id="clientSecret" class="input" type="password" placeholder="*****" required />
+                    </div>
+                </div>
+
+                <button id="run" type="button" class="button is-primary">Run validation</button>
+            </form>
+        </div>
+
+
+        <div class="section" style="display: none" id="apiUrlError">
+            <div class="notification is-danger">
+                <button class="delete"></button>
+                Invalid API URL.
+            </div>
+        </div>
+
+        <div class="section" style="display: none" id="error">
+            <div class="notification is-danger">
+                <button class="delete"></button>
+                Invalid Authentication.
+            </div>
+        </div>
+
+
+        <div class="section">
+            <div id="processing">
+                <label></label>
+            </div>
+            <div class="divTable" id="tableResult">
+                <div class="divTableBody" id="tableBody">
+                    <div class="divTableRow">
+                        <div class="divTableHead"></div>
+                        <div class="divTableHead">Resources</div>
+                        <div class="divTableHead">Endpoint</div>
+                        <div class="divTableHead">Total</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="application/javascript" src="endpoints.js"></script>
+    <script type="application/javascript" src="htmlHelper.js"></script>
+    <script type="application/javascript" src="certification.js"></script>
+    <script type="application/javascript" src="main.js"></script>
+</body>
+</html>

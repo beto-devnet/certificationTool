@@ -1,0 +1,41 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css";
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 10px 20px 10px 20px;
+}
+
+.auth-form button {
+    background-color: #bf3f97;
+    color: white;
+}
+
+.auth-form label.info {
+    font-size: smaller;
+    color: #1b9ad6;
+}
+
+.header {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.header h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.row-red {
+    background-color: #ffe2e2;
+}
+
+.divTable { display: table;width: 100%; margin-bottom: 20px; }
+.divTableRow { display: table-row; }
+.divTableRow-red { background-color: #ffe2e2; }
+.divTableHeading { background-color: #1b9ad6; display: table-header-group; }
+.divTableCell,.divTableHead { display: table-cell; padding: 3px 10px; }
+.divTableHeading { background-color: #1b9ad6; display: table-header-group; font-weight: bold; }
+.divTableHead { background-color: #1b9ad6; font-weight: bold; color: white }
+.divTableFoot { background-color: #EEE; display: table-footer-group; font-weight: bold; }
+.divTableBody { display: table-row-group; }
